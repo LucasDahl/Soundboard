@@ -28,7 +28,8 @@ class ViewController: UIViewController {
         // Make a reference to the sound url
         let soundUrl = Bundle.main.url(forResource: note, withExtension: "mp3")
         
-        
+        // Make sure that a file was found
+        guard soundUrl != nil else { return }
         
         do {
             
