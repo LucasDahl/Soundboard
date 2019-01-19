@@ -13,12 +13,39 @@ class ViewController: UIViewController {
     
     // Properties
     var audioPlayer: AVAudioPlayer?
+    var soundArray = ["a", "b", "c", "d"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
+    //========
+    // Methods
+    //========
+    
+    func playSound(_ note: String) {
+        
+        // Make a reference to the sound url
+        let soundUrl = Bundle.main.url(forResource: note, withExtension: "mp3")
+        
+        
+        
+        do {
+            
+            // Try playing the sound file
+            audioPlayer = try AVAudioPlayer(contentsOf: soundUrl!)
+            
+            // Actually plays the sound
+            audioPlayer?.play()
+            
+        } catch {
+            
+            // Print any errors
+            print("Error playing sound file: \(error)")
+            
+        }
+        
+    }
     
     //=================
     // MARK: - Action
@@ -26,7 +53,10 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTpped(_ sender: UIButton) {
         
+        // Get the selected button based on  its tag property, and use that tag - 1 to selcet the sound to play using the method.
+        let selectedSound = soundArray[sender.tag - 1]
         
+        playSound(selectedSound)
         
     }
     

@@ -62,10 +62,10 @@
 		95F4FFAC21F3C61100A94115 /* Soundboard */ = {
 			isa = PBXGroup;
 			children = (
-				95F4FFBF21F3C8BC00A94115 /* Sounds */,
 				95F4FFAD21F3C61100A94115 /* AppDelegate.swift */,
 				95F4FFAF21F3C61100A94115 /* ViewController.swift */,
 				95F4FFB121F3C61100A94115 /* Main.storyboard */,
+				95F4FFBF21F3C8BC00A94115 /* Sounds */,
 				95F4FFB421F3C61200A94115 /* Assets.xcassets */,
 				95F4FFB621F3C61200A94115 /* LaunchScreen.storyboard */,
 				95F4FFB921F3C61200A94115 /* Info.plist */,
